@@ -1,2 +1,5 @@
-# daily-coding-problem
-Code produced from Daily Coding Problem exercises I try to solve.
+# Daily Coding Problem
+
+Solutions for random [Daily Coding Problem](https://www.dailycodingproblem.com/) exercises I try to solve.
+
+-----
