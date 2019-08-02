@@ -13,6 +13,8 @@ sub main() {
     my ($k, $s) = ($ARGV[0], $ARGV[1]);
     my @return = string_to_array($s, $k);
 
+    die "string could not be successfully wrapped\n" unless defined $return[0];
+
     say "-- wrapped to " . (scalar @return) . " lines --";
     say '#'x$k; # to visually indicate the line length
     say join("\n", @return);
@@ -28,7 +30,7 @@ sub string_to_array($$) {
 
     do {
         $word = shift(@words);
-        die "word '$word' exceeds the line length\n" if (length($word) > $line_length);
+        return undef if (length($word) > $line_length);
 
         push (@line, $word);
 
